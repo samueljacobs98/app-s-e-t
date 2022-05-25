@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+* {
+  font-family: $font-primary;
+  font-size: $font-size-default;
+  color: $colour-dark-grey;
+}

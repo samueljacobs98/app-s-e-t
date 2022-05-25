@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+
+.navbar {
+  display: none;
+
+  & > * {
+    margin: 0 1rem;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+}

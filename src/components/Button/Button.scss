@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.button {
+  border: none;
+  padding: 1rem 2.25rem;
+  font-weight: bold;
+
+  &--nav {
+    color: $colour-blue;
+    background-color: $colour-light-blue;
+  }
+}

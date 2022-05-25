@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .header {
+    justify-content: space-around;
+  }
+}
