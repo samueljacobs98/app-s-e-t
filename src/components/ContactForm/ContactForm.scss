@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+
+.form {
+  padding: $standard;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: calc($standard / 2);
+
+    p {
+      font-weight: bold;
+    }
+
+    input {
+      padding: calc($standard / 2);
+    }
+
+    input,
+    textarea {
+      border: 1px solid $colour-light-grey;
+      border-radius: 0.25rem;
+    }
+
+    label {
+      font-weight: 400;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+}
