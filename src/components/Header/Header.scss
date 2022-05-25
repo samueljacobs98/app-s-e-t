@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid $colour-light-grey;
+  padding: 1rem 0;
 
   &__logo {
     width: 100%;

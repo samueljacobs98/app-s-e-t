@@ -2,10 +2,16 @@
 
 .button {
   border: none;
+  border-radius: 0.5rem;
   padding: 1rem 2.25rem;
   font-weight: bold;
 
-  &--nav {
+  &--primary {
+    color: $colour-white;
+    background-color: $colour-blue;
+  }
+
+  &--secondary {
     color: $colour-blue;
     background-color: $colour-light-blue;
   }
