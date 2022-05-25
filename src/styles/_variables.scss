@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 // breakpoints
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -11,7 +10,8 @@ $extra-large-desktop-breakpoint: 2560px;
 $font-primary: "Lato", sans-serif;
 
 // font sizes
-$font-size-default: 0.75rem;
+$font-size-default: 1rem;
+$font-size-large: 1.5rem;
 
 // colours
 $colour-light-grey: #e6e6e6;

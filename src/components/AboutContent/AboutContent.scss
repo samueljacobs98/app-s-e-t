@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.about-content {
+  width: 100%;
+  max-width: 1080px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__text {
+    padding-bottom: 1em;
+
+    &--bold {
+      font-weight: 400;
+      padding-bottom: 0;
+    }
+    &--highlight {
+      text-decoration: underline;
+      color: $colour-blue;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    max-width: 600px;
+    align-self: center;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__list {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    &-item {
+      margin-block-start: 0.75em;
+      font-weight: bold;
+    }
+  }
+}
