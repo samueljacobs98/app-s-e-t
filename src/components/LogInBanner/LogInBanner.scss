@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.log-in-banner {
+  width: 100%;
+  padding: $standard;
+  background-image: url("../../assets/images/sunglasses.jpg");
+  background-size: cover;
+
+  &__container {
+    background-color: rgba($colour-dark-grey, 0.3);
+    color: $colour-white;
+    max-width: 500px;
+    padding: $standard;
+    margin: auto;
+
+    &-heading,
+    &-text {
+      color: inherit;
+    }
+
+    &-heading {
+      font-weight: 400;
+      font-size: $font-size-medium;
+    }
+
+    &-text {
+      padding: 1em 0;
+    }
+  }
+}

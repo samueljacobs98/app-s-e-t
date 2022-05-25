@@ -1,9 +1,14 @@
+import ContactBanner from "../../components/ContactBanner/ContactBanner";
 import Layout from "../../components/Layout/Layout";
+import LearnBanner from "../../components/LearnBanner/LearnBanner";
+import LogInBanner from "../../components/LogInBanner/LogInBanner";
 
 const Home = () => {
   return (
     <Layout>
-      <h1>Home</h1>
+      <LearnBanner />
+      <LogInBanner />
+      <ContactBanner />
     </Layout>
   );
 };

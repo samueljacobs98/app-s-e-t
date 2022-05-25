@@ -5,6 +5,7 @@
   border-radius: 0.5rem;
   padding: 1rem 2.25rem;
   font-weight: bold;
+  width: 100%;
 
   &--primary {
     color: $colour-white;
@@ -14,5 +15,11 @@
   &--secondary {
     color: $colour-blue;
     background-color: $colour-light-blue;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .button {
+    width: fit-content;
   }
 }

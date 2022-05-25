@@ -1,0 +1,51 @@
+@use "../../styles/variables" as *;
+
+.learn-banner {
+  width: 100%;
+  max-width: 1200px;
+  padding: $standard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    grid-area: img;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: $standard 0;
+    max-width: $tablet-breakpoint;
+    align-self: center;
+  }
+
+  &__container {
+    grid-area: con;
+    &-heading {
+      font-weight: 400;
+      font-size: $font-size-medium;
+    }
+
+    &-text {
+      padding: 1em 0;
+    }
+
+    &-list {
+      margin-block-end: 1em;
+      padding-inline-start: 40px;
+      &-item {
+        margin-block-start: 0.75em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .learn-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "con img";
+    gap: $standard;
+    margin: auto;
+  }
+}

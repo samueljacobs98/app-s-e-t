@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+
+.contact-banner {
+  padding: $standard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc($standard / 4);
+
+  &__heading {
+    font-weight: 300;
+    font-size: $font-size-medium;
+  }
+  &__subheading {
+    font-weight: 400;
+  }
+  &__text {
+    margin: calc($standard / 2) 0;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .contact-banner {
+    &__text {
+      column-count: 3;
+      column-gap: 2rem;
+    }
+  }
+}
