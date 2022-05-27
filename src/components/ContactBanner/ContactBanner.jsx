@@ -21,7 +21,7 @@ const ContactBanner = () => {
       <h2 className={block + "__heading"}>{contactBanner[0]}</h2>
       <h3 className={block + "__subheading"}>{contactBanner[1]}</h3>
       <p className={block + "__text"}>{text}</p>
-      <Button text="Contact us" type="primary" />
+      <Button text="Contact us" order="primary" />
     </section>
   );
 };

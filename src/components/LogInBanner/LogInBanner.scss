@@ -5,13 +5,15 @@
   padding: $standard;
   background-image: url("../../assets/images/sunglasses.jpg");
   background-size: cover;
+  display: flex;
+  justify-content: center;
 
   &__container {
     background-color: rgba($colour-dark-grey, 0.3);
     color: $colour-white;
     max-width: 500px;
     padding: $standard;
-    margin: auto;
+    // margin: auto;
 
     &-heading,
     &-text {
@@ -26,5 +28,11 @@
     &-text {
       padding: 1em 0;
     }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .log-in-banner {
+    justify-content: flex-start;
   }
 }

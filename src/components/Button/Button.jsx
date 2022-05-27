@@ -1,11 +1,11 @@
 import "./Button.scss";
 
-const Button = ({ text, type }) => {
-  // Button Types:
-  //  - Primary
-  //  - Secondary
-
-  return <button className={"button button--" + type}>{text}</button>;
+const Button = ({ text, order, onClick, type = "button" }) => {
+  return (
+    <button type={type} className={"button button--" + order} onClick={onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

@@ -10,7 +10,7 @@ const LogInBanner = () => {
       <article className={block + "__container"}>
         <h2 className={block + "__container-heading"}>{logIn[0]}</h2>
         <p className={block + "__container-text"}>{logIn[1]}</p>
-        <Button text="Log in" type="secondary" />
+        <Button text="Log in" order="secondary" />
       </article>
     </section>
   );

@@ -14,7 +14,7 @@ const Navbar = () => {
       <Link className="navbar__link" to="/contact">
         Contact Us
       </Link>
-      <Button text="Log in" type="secondary" />
+      <Button text="Log in" order="secondary" />
     </nav>
   );
 };
