@@ -1,11 +1,12 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins";
 
 .learn-banner {
   width: 100%;
-  max-width: 1200px;
   padding: $standard;
   display: flex;
   flex-direction: column;
+  gap: $standard;
   align-items: center;
   justify-content: center;
 
@@ -40,12 +41,14 @@
   }
 }
 
-@media screen and (min-width: $tablet-breakpoint) {
+@media screen and (min-width: $desktop-breakpoint) {
   .learn-banner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "con img";
-    gap: $standard;
-    margin: auto;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    @include mixins.paddingSides;
+
+    & > * {
+      width: 50%;
+    }
   }
 }

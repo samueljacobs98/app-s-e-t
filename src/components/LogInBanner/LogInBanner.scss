@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins";
 
 .log-in-banner {
   width: 100%;
@@ -13,7 +14,6 @@
     color: $colour-white;
     max-width: 500px;
     padding: $standard;
-    // margin: auto;
 
     &-heading,
     &-text {
@@ -34,5 +34,6 @@
 @media screen and (min-width: $tablet-breakpoint) {
   .log-in-banner {
     justify-content: flex-start;
+    @include mixins.paddingSides;
   }
 }

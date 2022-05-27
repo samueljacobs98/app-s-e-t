@@ -1,5 +1,10 @@
 @use "./variables" as *;
 
+@mixin paddingSides {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
 @mixin formLabel {
   font-weight: 400;
   & > span {

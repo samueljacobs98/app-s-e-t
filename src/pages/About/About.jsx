@@ -1,10 +1,13 @@
 import AboutContent from "../../components/AboutContent/AboutContent";
 import Layout from "../../components/Layout/Layout";
+import "./About.scss";
 
 const About = () => {
   return (
     <Layout>
-      <AboutContent />
+      <div className="container-about">
+        <AboutContent />
+      </div>
     </Layout>
   );
 };

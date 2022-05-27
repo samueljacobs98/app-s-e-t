@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins";
 
 .contact-banner {
   padding: $standard;
@@ -21,6 +22,8 @@
 
 @media screen and (min-width: $tablet-breakpoint) {
   .contact-banner {
+    @include mixins.paddingSides;
+
     &__text {
       column-count: 3;
       column-gap: 2rem;
