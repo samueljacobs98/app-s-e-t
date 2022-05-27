@@ -1,34 +1,31 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins";
 
 .form {
   padding: $standard;
 
   .field {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flexColumn;
     border: none;
-    gap: calc($standard / 2);
 
-    p {
-      font-weight: bold;
+    &__label {
+      @include mixins.formLabel;
     }
 
-    input {
-      padding: calc($standard / 2);
+    &__text-area {
+      @include mixins.formInput;
     }
 
-    input,
-    textarea {
-      border: 1px solid $colour-light-grey;
-      border-radius: 0.25rem;
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      gap: calc($gap / 2);
     }
+  }
+}
 
-    label {
-      font-weight: 400;
-    }
-
-    span {
-      font-style: italic;
-    }
+@media screen and (min-width: $tablet-breakpoint) {
+  .form {
+    width: 50%;
   }
 }

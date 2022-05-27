@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+@mixin formLabel {
+  font-weight: 400;
+  & > span {
+    font-style: italic;
+  }
+}
+
+@mixin inputTextArea {
+  border: 1px solid $colour-light-grey;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+@mixin formInput {
+  padding: calc($standard / 2);
+  @include inputTextArea;
+}
+
+@mixin gap {
+  gap: $gap;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  @include gap;
+}
+
+@mixin gridGap {
+  display: grid;
+  gap: $gap;
+  @include gap;
+}

@@ -1,0 +1,11 @@
+@use "../../../styles/mixins";
+
+.phone {
+  &__label {
+    @include mixins.formLabel;
+  }
+
+  &__input {
+    @include mixins.formInput;
+  }
+}

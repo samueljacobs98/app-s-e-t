@@ -1,0 +1,24 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins";
+
+.details {
+  @include mixins.gridGap;
+
+  &__container {
+    @include mixins.flexColumn;
+  }
+
+  &__label {
+    @include mixins.formLabel;
+  }
+
+  &__input {
+    @include mixins.formInput;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .details {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,44 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins";
+
+.address {
+  // width: 100%;
+  @include mixins.gridGap;
+
+  &__container {
+    @include mixins.gridGap;
+
+    &-row {
+      @include mixins.gridGap;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-rows {
+      @include mixins.gridGap;
+    }
+  }
+
+  &__item {
+    @include mixins.flexColumn;
+  }
+
+  &__label {
+    @include mixins.formLabel;
+  }
+
+  &__input {
+    @include mixins.formInput;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .address {
+    &__container {
+      grid-template-columns: 1fr 1fr;
+
+      &-rows {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
