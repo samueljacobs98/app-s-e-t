@@ -1,2 +1,6 @@
 @use "./reset" as *;
 @use "./typography" as *;
+
+#root {
+  height: 100vh;
+}

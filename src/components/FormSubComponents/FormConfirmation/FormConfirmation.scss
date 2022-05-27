@@ -1,0 +1,23 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins";
+
+.confirm {
+  background-color: $colour-light-green;
+  padding: $standard;
+  @include mixins.flexColumn;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: $colour-dark-green;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+}

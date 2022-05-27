@@ -7,6 +7,9 @@
   border-top: 1px solid $colour-light-grey;
   padding: 1rem 0;
   background-color: $colour-white;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
