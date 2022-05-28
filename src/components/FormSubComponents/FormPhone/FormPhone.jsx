@@ -12,6 +12,7 @@ const FormPhone = ({ n }) => {
         type="text"
         name={"phone" + n}
         id={"phone" + n}
+        maxLength="20"
       />
     </>
   );

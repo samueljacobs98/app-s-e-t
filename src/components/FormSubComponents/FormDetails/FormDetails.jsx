@@ -23,7 +23,7 @@ const FormDetails = () => {
           </label>
           <input
             className="details__input"
-            type="text"
+            type="email"
             name="email"
             id="email"
             required

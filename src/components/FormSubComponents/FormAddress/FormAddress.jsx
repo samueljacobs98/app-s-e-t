@@ -1,6 +1,9 @@
 import "./FormAddress.scss";
 
 const FormAddress = () => {
+  const postcodeValidation =
+    "([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))s?[0-9][A-Za-z]{2})";
+
   return (
     <div className="address">
       <div className="address__container">
@@ -51,6 +54,7 @@ const FormAddress = () => {
               type="text"
               name="state-county"
               id="state-county"
+              required
             />
           </div>
         </div>
@@ -64,6 +68,8 @@ const FormAddress = () => {
               type="text"
               name="postcode"
               id="postcode"
+              pattern={postcodeValidation}
+              title="UK Postcode"
               required
             />
           </div>
@@ -76,6 +82,7 @@ const FormAddress = () => {
               type="text"
               name="country"
               id="country"
+              required
             />
           </div>
         </div>

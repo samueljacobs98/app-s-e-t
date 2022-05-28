@@ -5,6 +5,7 @@ import FormConfirmation from "../FormSubComponents/FormConfirmation/FormConfirma
 import FormDetails from "../FormSubComponents/FormDetails/FormDetails";
 import FormHeader from "../FormSubComponents/FormHeader/FormHeader";
 import FormPhone from "../FormSubComponents/FormPhone/FormPhone";
+import { getBody, postRequest } from "../../utils/fetchUtils";
 import "./ContactForm.scss";
 
 const ContactForm = () => {
@@ -20,6 +21,18 @@ const ContactForm = () => {
     setShowAddress(e.target.checked);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const url =
+      "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit";
+    const body = getBody(event.target, showAddress);
+    const success = postRequest(url, body);
+
+    success
+      ? setFormSubmitted(true)
+      : alert("Something went wrong... please try again!");
+  };
+
   const addressCheckbox = (
     <div className="field__checkbox">
       <input
@@ -33,7 +46,7 @@ const ContactForm = () => {
   );
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <fieldset className="field">
         <FormHeader />
         {formSubmitted ? (
@@ -59,6 +72,8 @@ const ContactForm = () => {
               id="message"
               cols="30"
               rows="10"
+              maxLength="500"
+              required
             ></textarea>
             {addressCheckbox}
             {showAddress && <FormAddress />}
