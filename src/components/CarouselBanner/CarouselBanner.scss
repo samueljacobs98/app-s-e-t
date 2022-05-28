@@ -8,21 +8,17 @@
 }
 
 .slide {
-  background-size: cover;
+  background-size: 100%;
+  // background-size: cover;
   background-position: center;
-
-  &-0 {
-    background-image: url("../../assets/images/office1.jpg");
-  }
-  &-1 {
-    background-image: url("../../assets/images/model1.jpg");
-  }
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 .slide-info {
-  background-color: rgba(0, 0, 0, 0.5);
   width: fit-content;
   padding: 8rem 0;
+  max-width: 30rem;
 
   &__header {
     font-size: 3rem;

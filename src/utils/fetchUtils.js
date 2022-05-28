@@ -1,3 +1,22 @@
+export const getRequest = async (url) => {
+  const response = await fetch(url);
+  const responseCleaned = await response.json();
+  return responseCleaned;
+};
+
+export const postRequest = async (url, body) => {
+  try {
+    fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
+
 export const getBody = (form, showAddress) => {
   const bodyObject = { PhoneNumbers: [] };
 
@@ -25,17 +44,4 @@ export const getBody = (form, showAddress) => {
   }
 
   return bodyObject;
-};
-
-export const postRequest = async (url, body) => {
-  try {
-    fetch(url, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(body),
-    });
-    return true;
-  } catch (error) {
-    return false;
-  }
 };
