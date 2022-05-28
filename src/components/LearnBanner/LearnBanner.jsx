@@ -26,7 +26,12 @@ const LearnBanner = () => {
         <h2 className={getClass("__container-heading")}>{learnBanner[0]}</h2>
         <p className={getClass("__container-text")}>{learnBanner[1]}</p>
         <ul className={getClass("__container-list")}>{list}</ul>
-        <Button text={"Learn more"} order={"primary"} />
+        <Button
+          text={"Learn more"}
+          order={"primary"}
+          link={true}
+          location={"about"}
+        />
       </div>
     </section>
   );
