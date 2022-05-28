@@ -3,6 +3,11 @@
 @mixin paddingSides {
   padding-left: $padding;
   padding-right: $padding;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+  }
 }
 
 @mixin formLabel {
