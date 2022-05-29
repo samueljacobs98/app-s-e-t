@@ -9,10 +9,8 @@ export const getNewSlide = (increment, data, currentSlide) => {
 };
 
 export const getBooleanArray = (length, index) => {
-  const booleanArray = [];
-  for (let i = 0; i < length; i++) {
-    booleanArray.push(false);
-  }
+  const booleanArray = new Array(length);
+  booleanArray.fill(false);
   booleanArray[index] = true;
   return booleanArray;
 };
