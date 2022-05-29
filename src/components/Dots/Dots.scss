@@ -10,4 +10,6 @@
   display: flex;
   gap: calc($gap / 2);
   margin-bottom: $gap;
+
+  transform: translateX(-50%);
 }
