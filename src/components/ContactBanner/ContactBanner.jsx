@@ -25,7 +25,7 @@ const ContactBanner = () => {
         text="Contact us"
         order="primary"
         link={true}
-        location={"contact"}
+        location={"contact-us"}
       />
     </section>
   );

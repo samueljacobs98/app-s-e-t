@@ -1,59 +1,55 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins";
 
-.swiper-slide {
+.slide {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  @include mixins.paddingSides;
 
-.slide {
-  background-size: 100%;
-  // background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-}
 
-.slide-info {
-  width: fit-content;
-  padding: 8rem 0;
-  max-width: 30rem;
+  &__info {
+    padding: 8rem 0;
+    max-width: 40rem;
+    z-index: 1;
 
-  &__header {
-    font-size: 3rem;
+    &-header {
+      font-size: 3rem;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+    }
+
+    &-header,
+    &-text {
+      padding-bottom: $standard;
+      color: white;
+    }
   }
 
-  &__text {
-    font-size: 1.5rem;
-  }
-
-  &__header,
-  &__text {
-    padding-bottom: $standard;
-    color: white;
+  &__overlay {
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      // rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
-  .swiper-slide {
-    @include mixins.paddingSides;
-    justify-content: flex-start;
-  }
-
-  .slide-info {
-    padding: 10rem 0;
-  }
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  .slide-info {
-    padding: 12rem 0;
-  }
-
   .slide {
-    &-1 {
-      background-position: top;
-    }
+    justify-content: flex-start;
   }
 }

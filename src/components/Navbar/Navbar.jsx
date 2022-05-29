@@ -5,13 +5,13 @@ import Button from "../Button/Button";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link className="navbar__link" to="/home">
+      <Link className="navbar__link" to="/">
         Home
       </Link>
-      <Link className="navbar__link" to="/about">
+      <Link className="navbar__link" to="/about-us">
         About Us
       </Link>
-      <Link className="navbar__link" to="/contact">
+      <Link className="navbar__link" to="/contact-us">
         Contact Us
       </Link>
       <Button text="Log in" order="secondary" />

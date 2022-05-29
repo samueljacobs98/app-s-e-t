@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins";
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+
+  display: flex;
+  gap: calc($gap / 2);
+  margin-bottom: $gap;
+}

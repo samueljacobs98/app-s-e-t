@@ -1,0 +1,31 @@
+.pagination {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-arrow {
+      width: 10px;
+    }
+
+    &-flip {
+      transform: scale(-1, 1);
+    }
+  }
+}
