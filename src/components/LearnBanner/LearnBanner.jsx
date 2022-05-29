@@ -30,7 +30,7 @@ const LearnBanner = () => {
           text={"Learn more"}
           order={"primary"}
           link={true}
-          location={"about"}
+          location={"about-us"}
         />
       </div>
     </section>

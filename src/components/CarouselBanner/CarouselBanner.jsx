@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectFade } from "swiper";
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import "swiper/scss/effect-fade";
 import "./CarouselBanner.scss";
 import Button from "../Button/Button";
 import { getRequest } from "../../utils/fetchUtils";
+import { getBooleanArray, getNewSlide } from "../../utils/utils";
+import Pagniation from "../Pagination/Pagniation";
+import Dots from "../Dots/Dots";
 
 const CarouselBanner = () => {
   const [data, setData] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [dotsArr, setDotsArr] = useState([]);
 
   const getData = async () => {
     const url =
       "https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details";
     const newData = await getRequest(url);
     setData(newData.Details);
-    return newData.Details;
+    setDotsArr(getBooleanArray(newData.Details.length, 0));
+  };
+
+  const handleClick = (e) => {
+    const newSlide = getNewSlide(e.target.value === "1", data, currentSlide);
+    setCurrentSlide(newSlide);
+    setDotsArr(getBooleanArray(data.length, newSlide));
   };
 
   useEffect(() => {
@@ -26,45 +31,29 @@ const CarouselBanner = () => {
 
   const slides = data.map((slide, index) => {
     return (
-      <SwiperSlide
+      <div
         key={"slide" + index}
-        className={"slide slide-" + index}
+        className="slide"
         style={{ backgroundImage: `url(${slide.ImageUrl})` }}
       >
-        <div className="slide-info">
-          <h1 className="slide-info__header">{slide.Title}</h1>
-          <p className="slide-info__text">{slide.Subtitle}</p>
+        <div className="slide__info">
+          <h1 className="slide__info-header">{slide.Title}</h1>
+          <p className="slide__info-text">{slide.Subtitle}</p>
           <Button
             text="Contact us"
             order="primary"
             link={true}
-            location={"contact"}
+            location={"contact-us"}
           />
         </div>
-      </SwiperSlide>
+        <Pagniation handleClick={handleClick} />
+        <Dots dotsArr={dotsArr} />
+        <div className="slide__overlay"></div>
+      </div>
     );
   });
 
-  return (
-    <>
-      {data && (
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          effect={"fade"}
-          navigation={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[EffectFade, Navigation, Pagination]}
-          className="carousel"
-        >
-          {slides}
-        </Swiper>
-      )}
-    </>
-  );
+  return <>{slides[currentSlide]}</>;
 };
 
 export default CarouselBanner;
