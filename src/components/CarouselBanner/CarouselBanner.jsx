@@ -22,8 +22,16 @@ const CarouselBanner = () => {
   const handleClick = (e) => {
     const newSlide = getNewSlide(e.target.value === "1", data, currentSlide);
     setCurrentSlide(newSlide);
-    setDotsArr(getBooleanArray(data.length, newSlide));
   };
+
+  useEffect(() => {
+    const length = data.length;
+    const slide = currentSlide;
+
+    const newDotsArr = getBooleanArray(length, slide);
+
+    setDotsArr(newDotsArr);
+  }, [currentSlide, data]);
 
   useEffect(() => {
     getData();

@@ -9,8 +9,12 @@ export const getNewSlide = (increment, data, currentSlide) => {
 };
 
 export const getBooleanArray = (length, index) => {
+  // console.log(length, index);
   const booleanArray = new Array(length);
+  // console.log(booleanArray);
   booleanArray.fill(false);
+  // console.log(booleanArray);
   booleanArray[index] = true;
+  // console.log(booleanArray);
   return booleanArray;
 };
