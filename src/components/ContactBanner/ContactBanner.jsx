@@ -6,10 +6,12 @@ import { Fragment } from "react";
 const ContactBanner = () => {
   const block = "contact-banner";
 
-  const text = contactBanner[2].map((para) => {
+  const text = contactBanner[2].map((para, index) => {
+    const content =
+      index === 0 ? <span className={block + "__bold"}>{para}</span> : para;
     return (
       <Fragment key={para}>
-        {para}
+        {content}
         <br />
         <br />
       </Fragment>

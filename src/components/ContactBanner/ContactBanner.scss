@@ -18,6 +18,9 @@
   &__text {
     margin: calc($standard / 2) 0;
   }
+  &__bold {
+    font-weight: 700;
+  }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
