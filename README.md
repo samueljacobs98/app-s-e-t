@@ -28,3 +28,13 @@ The goal of this project was to create a React SPA that matched a provided desig
 - Create React App was used to bundle and minify the app.
 
 - ESLint was used to ensure clean code was written and any unused code was noticed and removed.
+
+## Links
+
+### Deployed Site
+
+https://samueljacobs98.github.io/app-s-e-t/
+
+### GitHub Repo
+
+https://github.com/samueljacobs98/app-s-e-t
