@@ -1,5 +1,15 @@
 @use "./variables" as *;
 
+@mixin smallPaddingSides {
+  padding-left: $standard;
+  padding-right: $standard;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+  }
+}
+
 @mixin paddingSides {
   padding-left: $padding;
   padding-right: $padding;
