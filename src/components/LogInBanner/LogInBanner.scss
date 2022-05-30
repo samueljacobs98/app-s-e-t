@@ -10,7 +10,7 @@
   justify-content: center;
 
   &__container {
-    background-color: rgba($colour-dark-grey, 0.3);
+    background-color: rgba($colour-dark-grey, 0.65);
     background-position: right center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,7 +22,6 @@
     &-heading,
     &-text {
       color: inherit;
-      // line-height: 1.5;
     }
 
     &-heading {

@@ -37,9 +37,8 @@
     position: absolute;
     background: linear-gradient(
       90deg,
-      rgba(0, 0, 0, 1) 0%,
-      // rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 0) 100%
+      rgb(40, 40, 40) 0%,
+      rgba(40, 40, 40, 0) 50%
     );
     top: 0;
     bottom: 0;

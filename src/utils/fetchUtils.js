@@ -1,7 +1,11 @@
 export const getRequest = async (url) => {
-  const response = await fetch(url);
-  const responseCleaned = await response.json();
-  return responseCleaned;
+  try {
+    const response = await fetch(url);
+    const responseCleaned = await response.json();
+    return responseCleaned;
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 export const postRequest = async (url, body) => {
