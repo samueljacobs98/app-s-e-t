@@ -9,6 +9,7 @@
   text-decoration: none;
   display: block;
   text-align: center;
+  position: relative;
 
   &--primary {
     color: $colour-white;
@@ -23,10 +24,20 @@
   &:hover {
     cursor: pointer;
   }
+
+  &__icon {
+    position: absolute;
+    left: $gap;
+    width: 25px;
+  }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
   .button {
     width: fit-content;
+
+    &--submit {
+      width: 100%;
+    }
   }
 }
