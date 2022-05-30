@@ -26,3 +26,5 @@ The goal of this project was to create a React SPA that matched a provided desig
 - SEO was optimised by following good practise within the HTML document.
 
 - Create React App was used to bundle and minify the app.
+
+- ESLint was used to ensure clean code was written and any unused code was noticed and removed.

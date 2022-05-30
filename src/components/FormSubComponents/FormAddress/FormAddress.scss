@@ -2,7 +2,6 @@
 @use "../../../styles/mixins";
 
 .address {
-  // width: 100%;
   @include mixins.gridGap;
 
   &__container {
